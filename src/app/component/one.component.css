@@ -3,3 +3,22 @@ h1 {
   color: brown;
   text-align: center;
 }
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+label{
+  color: rgb(116, 0, 0);
+}
+
+div{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+div span {
+  color: rgb(0, 0, 68);
+}
+

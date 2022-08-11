@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core'
-import { Data } from '../../data'
+
 
 @Component({
   selector:'one-app',
@@ -8,14 +8,33 @@ import { Data } from '../../data'
 })
 
 export class OneComponent implements OnInit {
-    name = "Prudhvi"
+   smallLetters:string[] = ["a","b",'c','d']
+   CapitalLetters:string[]= ['A','B','C','D']
+   numbers:string[]= ['0','1','2','3']
+   characters:string[]=['!','@','#','$','%','&','_']
+   randomNumber:any;
+   passwords:any = [];
+   
    
     ngOnInit(){
-      this.getData()
+      
     }
 
-    getData(){
-      const family = Data;
+
+    password:string = "";
+
+    data(event){
+      const lengthOfPassword = event;
+      for(let i=1;i <= lengthOfPassword;i++){
+       this.randomNumber = Math.floor(Math.random()*4);
+       
+       this.passwords.push(this.smallLetters[this.randomNumber])
+       console.log(this.passwords.join(''))
+
+      }
+
+
+
 
     }
 

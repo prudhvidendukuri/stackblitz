@@ -1,4 +1,18 @@
-<h1>Dendukuri's Family Details</h1>
-<ul>
-  <li *ngFor="let item of family">{{item}}</li>
-</ul>
+<h1>PASSWORD GENERATOR</h1>
+<div class="container">
+  <label>Length of the password: <input type="number" #number></label>
+
+
+  <div>
+
+  <span><input type="checkbox">Small Letters</span>
+  <span><input type="checkbox">Capital Letters</span>
+  <span><input type="checkbox">Numbers</span>
+  <span><input type="checkbox">Special Characters(@,!,#,$,%,_,&)</span>
+
+  </div>
+  <button (click)="data(number.value)" >Generate</button>
+
+  <h3>Password: {{password}}</h3>
+</div>
+
